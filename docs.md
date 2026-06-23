@@ -1,26 +1,23 @@
-### Tarea 1
+# Tarea 1
 
-## parte a
+#### parte a
 
-# 1 
+ 
 > sudo apt install openssh-server
-
-# 2
-
 > Cambiar a un puerto diferente del 22 -> 4848
 > Maximo intento de contrasenia a 2 -> MaxAuthTries
 
 
-## parte b
+#### parte b
 
 > mkdir usuarios
 > cd usuarios
 > mkdir administracion
 
-# Grupo
+##### Grupo
 > groupadd programadores
 
-# Permisos
+##### Permisos
 > sudo chmod 754 /usuarios/administracion
 
 // Root
@@ -32,7 +29,7 @@
 // otros
 > setfacl -d -m o:r usuarios/administracion/
 
-## Parte c
+#### Parte c
 
 # Seccion de backup
 > mkdir backup
