@@ -70,5 +70,6 @@ root@AdminPET:~# sudo nano /etc/samba/smb.conf
 root@AdminPET:~# sudo chgrp -R programadores /usuarios/administracion
 root@AdminPET:~# sudo chmod 2770 /usuarios/administracion
 root@AdminPET:~# smbd
+sudo smbpasswd -a root
 ```
 
