@@ -61,7 +61,7 @@ root@AdminPET:~# sudo nano /etc/samba/smb.conf
    path = /usuarios/administracion
    writeable = yes
    browsable = yes
-   reate mask = 0754
+   directory mask = 0754
 
 ```
 
