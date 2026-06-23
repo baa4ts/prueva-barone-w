@@ -29,14 +29,14 @@
 // otros
 > setfacl -d -m o:r usuarios/administracion/
 
-#### Parte c
+##### Parte c
 
-# Seccion de backup
+#### Seccion de backup
 > mkdir backup
 > nano backup.sh
 
 
-# Script del backup
+##### Script del backup
 ```bash
 SHELL=/bin/bash
 now=$(date)
