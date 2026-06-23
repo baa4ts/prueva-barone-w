@@ -4,7 +4,9 @@
 
  
 > sudo apt install openssh-server
+
 > Cambiar a un puerto diferente del 22 -> 4848
+
 > Maximo intento de contrasenia a 2 -> MaxAuthTries
 
 
