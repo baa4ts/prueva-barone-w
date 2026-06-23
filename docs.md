@@ -1,0 +1,50 @@
+### Tarea 1
+
+## parte a
+
+# 1 
+sudo apt install openssh-server
+
+# 2
+
+Cambiar a un puerto diferente del 22 -> 4848
+Maximo intento de contrasenia a 2 -> MaxAuthTries
+
+
+## parte b
+
+mkdir usuarios
+cd usuarios
+mkdir administracion
+
+# Grupo
+groupadd programadores
+
+# Permisos
+sudo chmod 754 /usuarios/administracion
+
+// Root
+setfacl -d -m u:root:rwx usuarios/administracion/
+
+// Programadores
+setfacl -d -m g:programadores:wx usuarios/administracion/
+
+// otros
+setfacl -d -m o:r usuarios/administracion/
+
+## Parte c
+
+# Seccion de backup
+mkdir backup
+nano backup.sh
+
+
+# Script del backup
+SHELL=/bin/bash
+now=$(date)
+
+cp -r /usuarios/administracion/ "/backup/$now"
+
+# Crontab
+00 23 * * * backup.sh
+
