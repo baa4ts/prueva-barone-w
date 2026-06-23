@@ -51,11 +51,9 @@ cp -r /usuarios/administracion/ "/backup/$now"
 
 
 # Samba
+```
 root@AdminPET:~# sudo nano /etc/samba/smb.conf
-root@AdminPET:~# sudo chmod 2770 /usuarios/administracion
-root@AdminPET:~# sudo chgrp -R programadores /usuarios/administracion
-root@AdminPET:~# sudo chmod 2770 /usuarios/administracion
-root@AdminPET:~# smbd
+```
 
 ```
 [compartidos]
@@ -65,5 +63,12 @@ root@AdminPET:~# smbd
    browsable = yes
    reate mask = 0754
 
+```
+
+
+```
+root@AdminPET:~# sudo chgrp -R programadores /usuarios/administracion
+root@AdminPET:~# sudo chmod 2770 /usuarios/administracion
+root@AdminPET:~# smbd
 ```
 
