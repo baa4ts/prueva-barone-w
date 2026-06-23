@@ -48,3 +48,22 @@ cp -r /usuarios/administracion/ "/backup/$now"
 
 # Crontab
 > 00 23 * * * backup.sh
+
+
+# Samba
+root@AdminPET:~# sudo nano /etc/samba/smb.conf
+root@AdminPET:~# sudo chmod 2770 /usuarios/administracion
+root@AdminPET:~# sudo chgrp -R programadores /usuarios/administracion
+root@AdminPET:~# sudo chmod 2770 /usuarios/administracion
+root@AdminPET:~# smbd
+
+```
+[compartidos]
+   guest ok = yes
+   path = /usuarios/administracion
+   writeable = yes
+   browsable = yes
+   reate mask = 0754
+
+```
+
